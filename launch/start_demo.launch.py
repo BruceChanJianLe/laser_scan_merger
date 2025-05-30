@@ -58,7 +58,7 @@ def generate_launch_description():
         cmd=[
             "ros2", "bag", "play", "-l",
             path.join(get_package_share_directory("laser_scan_merger"),
-            "test", "demo_scan"
+            "test", "demo_scan_rosbag", "demo_scan"
         )],
         shell=True,
         output="screen"
