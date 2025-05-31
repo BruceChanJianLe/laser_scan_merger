@@ -55,9 +55,7 @@ namespace util
     declare_parameter("merged_frame_id", "");
     declare_parameter("output_topic", "");
     declare_parameter("debug", false);
-    declare_parameter("enable_filtering", false);
     declare_parameter("moving_frames", false);
-    declare_parameter("multi_thread", false);
     declare_parameter("queue_size", 20);
     declare_parameter("angle_min", -M_PI);
     declare_parameter("angle_max", M_PI);
@@ -167,6 +165,17 @@ namespace util
     undeclare_parameter("debug");
     undeclare_parameter("moving_frames");
     undeclare_parameter("queue_size");
+    undeclare_parameter("angle_min");
+    undeclare_parameter("angle_max");
+    undeclare_parameter("angle_increment");
+    undeclare_parameter("range_min");
+    undeclare_parameter("range_max");
+    undeclare_parameter("inf_epsilon");
+    undeclare_parameter("use_inf");
+    undeclare_parameter("scan_time");
+    undeclare_parameter("min_height");
+    undeclare_parameter("max_height");
+    undeclare_parameter("tolerance");
   }
 
   void LaserScanMerger::laserScanMergerCB(const std::vector<laserScanCBMsgPtrT> &msgs)
