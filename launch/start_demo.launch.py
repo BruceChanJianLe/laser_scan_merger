@@ -37,13 +37,6 @@ def generate_launch_description():
         output="screen"
     )
 
-    # Needed for bag that does not have clock
-    # start_pc_repub = Node(
-    #     package="laser_scan_merger",
-    #     executable="point_cloud_repub",
-    #     output="screen",
-    # )
-
     start_rviz2 = Node(
         package="rviz2",
         executable="rviz2",
@@ -66,7 +59,6 @@ def generate_launch_description():
 
     ld = LaunchDescription(ARGUMENTS)
     ld.add_action(container)
-    # ld.add_action(start_pc_repub)
     ld.add_action(start_rviz2)
     ld.add_action(play_rosbag)
 
